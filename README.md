@@ -13,7 +13,7 @@ Proje, .NET Core tabanlı örnek bir web uygulamasının otomatik olarak derlenm
 
 ## 📂 Repo Yapısı
 
-Proje, hocanın belirlediği standartlara uygun olarak aşağıdaki dosya yapısına sahiptir :
+Proje, hocanın belirlediği standartlara uygun olarak aşağıdaki dosya yapısına sahiptir  :
 
 ```text
 .
