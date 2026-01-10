@@ -9,7 +9,7 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 1       # Güncellemede fazladan 1 pod açabilir
+      maxSurge: 1        # Güncellemede fazladan 1 pod açabilir
       maxUnavailable: 0 # Güncellemede pod kapatmadan ilerler (Kesintisiz)
   selector:
     matchLabels:
