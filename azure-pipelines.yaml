@@ -1,0 +1,17 @@
+trigger:
+  - main
+
+pool:
+  name: 'mylocalpool'       
+  demands: agent.name -equals pop-os
+
+steps:
+- script: |
+    docker build -t odev-image:latest .
+  displayName: 'Docker Build Islemi'
+
+- script: |
+    kubectl delete -f deployment.yaml || true
+    kubectl apply -f deployment.yaml
+    kubectl apply -f service.yaml || true
+  displayName: 'Kubernetes Deploy Islemi'
