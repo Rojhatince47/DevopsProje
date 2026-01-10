@@ -6,7 +6,7 @@ Proje, .NET Core tabanlı örnek bir web uygulamasının otomatik olarak derlenm
 
 ## 🚀 Proje Amacı
 
-* **Otomasyon:** Kod değişikliklerinin (Push) otomatik olarak algılanıp sürecin başlatılması.
+* **Otomasyon:** Kod  değişikliklerinin (Push) otomatik olarak algılanıp sürecin başlatılması.
 * **Konteynerizasyon:** Uygulamanın Docker ile paketlenip imaj haline getirilmesi.
 * **Orkestrasyon:** Kubernetes deployment ve servis objeleri ile uygulamanın yönetilmesi.
 * **Altyapı:** Kendi bilgisayarımızda çalışan (Self-hosted) bir Azure Agent ile bulut ve yerel ortamın konuşturulması.
