@@ -16,7 +16,7 @@ steps:
     
     kubectl config use-context docker-desktop
 
-    sed -i 's|aspnet-app-image:latestaspnet-app-image:$(Build.BuildId)|g' deployment.yaml
+    sed -i 's|aspnet-app-image:latest|aspnet-app-image:$(Build.BuildId)|g' deployment.yaml
     
     kubectl apply -f deployment.yaml
     
