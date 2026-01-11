@@ -13,7 +13,7 @@ Proje, .NET Core tabanlı örnek bir web uygulamasının otomatik olarak derlenm
 
 ## 📂 Repo Yapısı
 
-aşağıdaki dosya yapısına sahiptir  :
+proje aşağıdaki dosya yapısına sahiptir  :
 
 ```text
 .
@@ -22,4 +22,4 @@ aşağıdaki dosya yapısına sahiptir  :
 ├── Dockerfile            # Uygulamanın Docker imajını oluşturma talimatları
 ├── azure-pipelines.yaml  # CI/CD sürecini yöneten pipeline dosyası
 ├── aspnetapp             # Uygulama kaynak kodları
-└── README.md             # Proje dokümantasyonu
+└── README.md             
