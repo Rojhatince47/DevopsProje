@@ -9,7 +9,7 @@ steps:
 - checkout: self  
 
 - script: |
-    docker build -t odev-image:$(Build.BuildId) .
+    docker build -t aspnet-app-image:$(Build.BuildId) .
   displayName: 'Docker Build '
 
 - script: |
