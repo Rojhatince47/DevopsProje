@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aspnet-app
+  labels:
+    app: aspnet-app
+spec:
+  replicas: 2  # Yedeklilik için 2 kopya çalıştırır
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1        # Güncellemede fazladan 1 pod açabilir
+      maxUnavailable: 0 # Güncellemede pod kapatmadan ilerler (Kesintisiz)
+  selector:
+    matchLabels:
+      app: aspnet-app
+  template:
+    metadata:
+      labels:
+        app: aspnet-app
+    spec:
+      containers:
+      - name: aspnet-container
+        image: aspnet-app-image:latest  # Pipeline'da build edilen imajı kullanır
+        imagePullPolicy: IfNotPresent # Önce yerel Docker'a bakar, yoksa indirir
+        ports:
+        - containerPort: 8080 # .NET container portu
+        resources:
+          requests:
+            memory: "64Mi"  # Garanti edilen RAM
+            cpu: "250m"     # Garanti edilen CPU
+          limits:
+            memory: "256Mi" # Maksimum RAM limiti
+            cpu: "500m"     # Maksimum CPU limiti
+        livenessProbe:      # Uygulama kilitlenirse restart atar
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 15
+        readinessProbe:     # Uygulama tam açılmadan trafik göndermez
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        env:
+        - name: ASPNETCORE_URLS
+          value: "http://+:8080"
