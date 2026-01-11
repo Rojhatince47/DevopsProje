@@ -13,7 +13,7 @@ Proje, .NET Core tabanlı örnek bir web uygulamasının otomatik olarak derlenm
 
 ## 📂 Repo Yapısı
 
-Proje, hocanın belirlediği standartlara uygun olarak aşağıdaki dosya yapısına sahiptir  :
+aşağıdaki dosya yapısına sahiptir  :
 
 ```text
 .
@@ -21,5 +21,5 @@ Proje, hocanın belirlediği standartlara uygun olarak aşağıdaki dosya yapıs
 ├── service.yaml          # Uygulamaya erişim için LoadBalancer servis tanımı
 ├── Dockerfile            # Uygulamanın Docker imajını oluşturma talimatları
 ├── azure-pipelines.yaml  # CI/CD sürecini yöneten pipeline dosyası
-├── app.py / Program.cs   # Uygulama kaynak kodları
+├── aspnetapp             # Uygulama kaynak kodları
 └── README.md             # Proje dokümantasyonu
