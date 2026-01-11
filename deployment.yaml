@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: aspnet-container
-        image: odev-image:latest  # Pipeline'da build edilen imajı kullanır
+        image: aspnet-app-image:latest  # Pipeline'da build edilen imajı kullanır
         imagePullPolicy: IfNotPresent # Önce yerel Docker'a bakar, yoksa indirir
         ports:
         - containerPort: 8080 # .NET container portu
